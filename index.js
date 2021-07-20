@@ -6,4 +6,9 @@ const router = jsonServer.router('db.json')
 
 app.use(auth)
 app.use(router)
-app.listen(9000)
+
+const PORT = process.env.PORT || 9000
+
+app.listen(PORT, ()=>{
+  console.log('Json server is Run!!!!!');
+})
